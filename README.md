@@ -65,22 +65,8 @@ The **News Flutter Application** is a dynamic mobile app built using Flutter, wh
 5. Run the application:
     flutter run
 
-
----
-
-## **How It Works**
-1. **Fetch and Display News**:  
-   News articles are fetched using API calls for each category. Data is dynamically displayed on the respective screen using ListView.
-
-2. **Toggle Between Themes**:  
-   Users can toggle between light and dark modes, and their preference is saved locally.
-
-3. **Real-Time Updates**:  
-   News articles are refreshed in real-time with proper error handling for failed API requests.
-
-
 ## **Future Enhancements**
-- Add more categories (e.g., Technology, Health).
+- Add more categories 
 - Implement advanced search functionality.
 - Introduce user preferences for custom news feeds.
 
