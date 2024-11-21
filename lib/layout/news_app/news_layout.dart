@@ -11,6 +11,8 @@ import '../../modules/news_app/search/srearch_screen.dart';
 
 class NewsLayout extends StatelessWidget
 {
+  const NewsLayout({super.key});
+
 
     @override
     Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class NewsLayout extends StatelessWidget
           var cubit = NewsCubit.get(context);
           return Scaffold(
             appBar: AppBar(
-              title: Text('NewsScreen') ,
+              title: const Text('NewsScreen') ,
               actions: [
                 Padding(
                   padding: const EdgeInsets.only(right: 20.0),
@@ -28,7 +30,7 @@ class NewsLayout extends StatelessWidget
                       onPressed: (){
                     AppCubit.get(context).changeAppMode();
                   },
-                      icon: Icon(Icons.brightness_4_outlined)),
+                      icon: const Icon(Icons.brightness_4_outlined)),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 20.0),
@@ -37,7 +39,7 @@ class NewsLayout extends StatelessWidget
                       {
                         navigateTo(context, SearchScreen());
                       },
-                      icon: Icon(Icons.search_rounded)),
+                      icon: const Icon(Icons.search_rounded)),
                 ),
 
               ],

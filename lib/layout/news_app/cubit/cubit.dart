@@ -17,15 +17,15 @@ class NewsCubit extends Cubit<NewsStates> {
 
   int currentIndex = 0;
   List<BottomNavigationBarItem> bottomItems = [
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
       icon: Icon(Icons.business_sharp),
       label: 'bussiness'
     ),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
         icon: Icon(Icons.sports),
         label: 'Sports'
     ),
-    BottomNavigationBarItem(
+    const BottomNavigationBarItem(
         icon: Icon(Icons.science),
         label: 'Science'
     ),
@@ -71,7 +71,7 @@ class NewsCubit extends Cubit<NewsStates> {
   void getSports()
   {
     emit(NewsGetSportsLoadingState());
-    if(sports.length == 0)
+    if(sports.isEmpty)
     {
       DioHelper.getData(url: 'v2/top-headlines',
         query: {
@@ -100,7 +100,7 @@ class NewsCubit extends Cubit<NewsStates> {
   void getScience()
   {
     emit(NewsGetScienceLoadingState());
-    if(science.length == 0)
+    if(science.isEmpty)
     {
       DioHelper.getData(url: 'v2/top-headlines',
         query: {
@@ -131,7 +131,7 @@ class NewsCubit extends Cubit<NewsStates> {
     search=[];
     DioHelper.getData(url: 'v2/everything',
       query: {
-        'q':'$value',
+        'q':value,
         'apiKey':'3a1327ddebc14901bebd13a5b1e63588',
       },
     ).then((value)

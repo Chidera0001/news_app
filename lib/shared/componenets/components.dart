@@ -21,11 +21,11 @@ Widget articalItem(article , context) => Padding(
 
         ),
       ),
-      SizedBox(
+      const SizedBox(
         width: 10,
       ),
       Expanded(
-        child: Container(
+        child: SizedBox(
           height: 120,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -40,7 +40,7 @@ Widget articalItem(article , context) => Padding(
               ),
               Text(
                 '${article['publishedAt']}',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.grey,
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
@@ -58,7 +58,7 @@ Widget articalItem(article , context) => Padding(
 Widget myDivider() => Padding(
   padding: const EdgeInsets.all(8.0),
   child:   Container(
-    child: Divider(
+    child: const Divider(
       height: 10,
       thickness: 2,
       color: Colors.grey,
@@ -73,11 +73,11 @@ Widget myDivider() => Padding(
 Widget articleBuilder(list , context) => ConditionalBuilder(
     condition: list.length>0 ,
     builder:(context) => ListView.separated(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         itemBuilder: (context,index) => articalItem(list[index],context),
         separatorBuilder: (context,index) => myDivider(),
         itemCount: list.length ) ,
-    fallback: (context)=> Center(child: CircularProgressIndicator()));
+    fallback: (context)=> const Center(child: CircularProgressIndicator()));
 
 
 
@@ -112,12 +112,13 @@ Widget defaultFormField({
       validator: (s)
       {
         validator(s);
+        return null;
       },
       enabled: isclicable ,
       decoration: InputDecoration(
         label: Text(label),
         prefixIcon: Icon(prefix),
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
       ),
     );
 

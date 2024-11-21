@@ -25,7 +25,7 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   final bool? isDark;
-  MyApp(this.isDark);
+  const MyApp(this.isDark, {super.key});
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.deepOrange,
               scaffoldBackgroundColor: Colors.white,
-              appBarTheme: AppBarTheme(
+              appBarTheme: const AppBarTheme(
                   titleSpacing: 20,
                   iconTheme: IconThemeData(color: Colors.black),
               titleTextStyle: TextStyle(
@@ -60,14 +60,14 @@ class MyApp extends StatelessWidget {
               statusBarIconBrightness: Brightness.dark,
               statusBarBrightness: Brightness.dark,
               )),
-            bottomNavigationBarTheme: BottomNavigationBarThemeData(
+            bottomNavigationBarTheme: const BottomNavigationBarThemeData(
             type: BottomNavigationBarType.fixed,
             selectedItemColor: Colors.blue,
             unselectedItemColor: Colors.grey,
             elevation: 20.0,
             backgroundColor: Colors.white,
             ),
-            textTheme: TextTheme(
+            textTheme: const TextTheme(
                 bodyLarge: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w600,
@@ -75,15 +75,15 @@ class MyApp extends StatelessWidget {
             )
             ),
 
-            floatingActionButtonTheme: FloatingActionButtonThemeData(
+            floatingActionButtonTheme: const FloatingActionButtonThemeData(
             backgroundColor: Colors.deepOrange)),
             darkTheme: ThemeData(
             primarySwatch: Colors.blue,
             scaffoldBackgroundColor: HexColor('15202B'),
             appBarTheme: AppBarTheme(
               titleSpacing: 20,
-            iconTheme: IconThemeData(color: Colors.white),
-            titleTextStyle: TextStyle(
+            iconTheme: const IconThemeData(color: Colors.white),
+            titleTextStyle: const TextStyle(
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
@@ -102,9 +102,9 @@ class MyApp extends StatelessWidget {
             elevation: 20.0,
             backgroundColor: HexColor('15202B'),
             ),
-            floatingActionButtonTheme: FloatingActionButtonThemeData(
+            floatingActionButtonTheme: const FloatingActionButtonThemeData(
             backgroundColor: Colors.deepOrange),
-            textTheme: TextTheme(
+            textTheme: const TextTheme(
                 bodyLarge: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.w600,

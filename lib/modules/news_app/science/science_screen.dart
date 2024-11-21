@@ -10,6 +10,8 @@ import '../../../shared/componenets/components.dart';
 
 
 class ScienceScreen extends StatelessWidget {
+  const ScienceScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<NewsCubit,NewsStates>(

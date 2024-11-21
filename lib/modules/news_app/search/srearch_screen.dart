@@ -8,6 +8,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class SearchScreen extends StatelessWidget {
 
   var searchController = TextEditingController();
+
+  SearchScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<NewsCubit,NewsStates>(

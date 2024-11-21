@@ -8,6 +8,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../layout/news_app/cubit/states.dart';
 
 class BusinessScreen extends StatelessWidget {
+  const BusinessScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<NewsCubit,NewsStates>(
